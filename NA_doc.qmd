@@ -5,7 +5,11 @@ author:
     email: luis.biedma@ec.europa.eu
     affiliation: Eurostat, Unit C5
 date: 2023-10-29
-format: docx
+format: 
+  docx:
+    toc: true
+    number-sections: true
+    highlight-style: github
 reference-doc: template.docx
 editor: visual
 ---
@@ -47,3 +51,14 @@ From the equations there does not seem to be any substantial difference between 
 -   NAMA has a strong focus on volumes while for SUTs the focus is on current prices (although that is changing).
 
 -   All SUTs transactions are required to be broken down by the same product classification that makes possible to group at product level all transactions.
+
+
+## The output approach
+
+The output approach is the basis of the NA system^[<https://politicalarithmetick.com/2017/04/03/what-the-textbooks-get-wrong-when-they-explain-gdp/>]
+
+### Production (P1)
+
+Production will be the first transaction we will look into and will be used to illustrate some general characteristics of the NA system.
+
+In NAMA we will compile P1 by economic activity and in the supply table we will compile additionally by product.
