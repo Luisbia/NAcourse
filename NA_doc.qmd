@@ -1,0 +1,45 @@
+---
+title: "A user guide to NAMA and SUT"
+author: "Luis Biedma"
+date-modified: "29-10-2023"
+format: pdf
+editor: visual
+---
+
+## Introduction
+
+This short guide is intended as a basic reference to understand the basics of National Accounts Main Aggregates (NAMA) and Supply and Use Tables (SUT) and the close interrelationships between the two from a practical point of view. We will omit some technical details and will provide just a practical overview. Both set of accounts describe the production, expenditure and income flows of an economy in a consistent way but using a different approach. We will not deal here with other parts of the National Accounts (sector accounts, financial accounts) although some reference to concepts like sectors and institutional units will need to be made. On the other hand, we will talk about classifications, codes and other practical aspects of the ESA 2010 transmission programme that are necessary for understanding the context and the practical use of the tables.
+
+## Overview
+
+Figure 1 provides a synoptic overview of the main flows captured in NAMA and SUT including very well-known transactions as Gross Domestic Product. These are the three approaches to GDP present in table 1 of the ESA transmission programme:
+
+Output: $$B1GQ = B1G + D21X31$$ {#eq-output}
+
+Expenditure: $$B1GQ = P3 + P5 + P6 + P7$$ {#eq-expenditure}
+
+Income: $$B1GQ = D1 + B2A3G + D2X3$$ {#eq-income}
+
+![Overview of NAMA and SUT](figs/fig1.png){#fig-overview}
+
+They are presented slightly different in @fig-overview. For example, Table 1 of the ESA does not show separately *P1* and *P2* but directly *B1G*, but *P1* and *P2* are included in table 3 of the ESA 2010 transmission programme, *D2X3* in Table 1 corresponds to the sum of *D21X31* from table 1 and *D39X39* available in table 3.
+
+If we put together @eq-output and @eq-expenditure after replacing *B1G* by *P1* - *P2* we obtain @eq-outexp:
+
+$$P1 - P2 + D21X31 = P3 + P5 + P6 - P7$$ {#eq-outexp}
+
+Making a few changes we obtain the basic SUT equation,@eq-sut, total supply should be equal to the total use.
+
+$$P1 + P7 + D21X31 = P2 + P3 + P5 + P6$$ {#eq-sut}
+
+And the income identity, @eq-income2:
+
+$$B1G = D1 + B2A3G + D29X39$$ {#eq-income2}
+
+From the equations there does not seem to be any substantial difference between NAMA and SUTs. In fact, there are not and that is why it is recommended to derive NAMA from SUTs. However, there are some differences that should be highlighted:
+
+-   NAMA compilation requirements are more demanding (T+2 months) compared to SUTs (T+3 years).
+
+-   NAMA has a strong focus on volumes while for SUTs the focus is on current prices (although that is changing).
+
+-   All SUTs transactions are required to be broken down by the same product classification that makes possible to group at product level all transactions.
