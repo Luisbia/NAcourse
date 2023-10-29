@@ -1,8 +1,12 @@
 ---
 title: "A user guide to NAMA and SUT"
-author: "Luis Biedma"
-date-modified: "29-10-2023"
-format: pdf
+author:
+  - name: Luis Biedma
+    email: luis.biedma@ec.europa.eu
+    affiliation: Eurostat, Unit C5
+date: 2023-10-29
+format: docx
+reference-doc: template.docx
 editor: visual
 ---
 
