@@ -52,13 +52,35 @@ From the equations there does not seem to be any substantial difference between 
 
 -   All SUTs transactions are required to be broken down by the same product classification that makes possible to group at product level all transactions.
 
+## Codes, classifications and valuations
+
+
+### Codes
+
+In order to work with national accounts we need to invest some time in understanding the coding system. There will be codes starting by *P*, *D* or *B*. *P* will refer to the goods and services transactions, *D* to distributive transactions and *B* to balancing items. A transaction, like *P6*, could be further detailed adding codes (*P61*, *P62*). This can go, specially in distributive transactions, up to the third/fourth digit (*D4432*). Luckily for us, in the goods and services accounts we will only have to learn a few codes up to two digits.
+
+In some occasions, especially for dissemination purposes, the sector is added to the transaction. So P3_S13 means final consumption (*P3*) of the government sector (*S13*) when it would make sense to group a particular transaction by sector (*P3* in our case) but i could be done for many more transactions. The sector can also refer to a geographical area (EU, euro area) so we will find codes like *P6_S212* or in some cases the geographical code use used directly and we will find *P6_B0*.
+
+### Classifications
+
+The NACE (industrial classification of economic activities within the European Union) would be the classification we will use more. There are specific aggregations in National Accounts 10, 21, 38, 64 and 88.
+
+The symmetric classification for products is the CPA (Classification of Products by Activity) and the most common aggregation is 64. I called them symmetric because the NACE and CPA are related. Industries in a particular NACE (B) will produce mainly, but not only, products of the counterpart CPA classification (CPA_B). We will see those classifications consistently applied in SUTS but not in NAMA. A particular classification (COICOP) would be used for Household and another one (AN) for GFCF. There are other ones we will not have to use (COFOG, COPNI) but it is recommended to be aware of their existence.
+
+### Valuations
+
+Production would be expressed at basic prices, which is the price relevant to the producer. Almost all other transactions will be expressed in purchaser prices, which includes taxes less subsidies on products and trade and transport margins. Exports and imports would be expressed at FOB (Free on Broad^[<https://www.incotermsexplained.com/the-incoterms-rules/the-eleven-rules-in-brief/free-board/>]) in NAMA, which can be assumed to be purchaser prices, as they are the values provided by BOP (Balance of Payments). In SUT imports are expressed at CIF (Cost Insurance Freight^[<https://www.incotermsexplained.com/the-incoterms-rules/the-eleven-rules-in-brief/cost-insurance-freight/>]) as they are needed by product and therefore provided by FTS (Foreign Trade Statistics^[<https://ec.europa.eu/eurostat/documents/3859598/16099239/KS-GQ-22-001-EN-N.pdf/96ccbe2a-a05b-0660-356b-02072c2ada8a?t=1676298298316&download=true>]). In SUT, several valuation matrix would be needed to put in basic prices the Use table. This step is needed to compile Input Output tables.
+
 
 ## The output approach
 
-The output approach is the basis of the NA system^[<https://politicalarithmetick.com/2017/04/03/what-the-textbooks-get-wrong-when-they-explain-gdp/>]
+The output approach is the basis of the NA system^[<https://politicalarithmetick.com/2017/04/03/what-the-textbooks-get-wrong-when-they-explain-gdp/>] even if it is of secondary importance for most users. If you look at a macroeconomics textbook the output approach is mainly ignored. The reason is that government cannot influence so much in the short-medium term the output transactions, but can do so directly in some expenditure transactions (government final consumption) or indirectly (household final consumption through the interest rates).
 
 ### Production (P1)
 
 Production will be the first transaction we will look into and will be used to illustrate some general characteristics of the NA system.
 
-In NAMA we will compile P1 by economic activity and in the supply table we will compile additionally by product.
+In NAMA we will compile P1 by economic activity and in the supply table we will compile it additionally by product.
+
+![Production](figs/fig2.png){#fig-production}
+NAMA is the bottom row with the industry totals. In SUT we will have all the cells. However for some industries there will be only values in the diagonal while in others we will find values outside the diagonal. For example, the main output of a vineyard would be wine but they could also offer accommodation services, wine courses, etc.
