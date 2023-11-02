@@ -54,7 +54,6 @@ From the equations there does not seem to be any substantial difference between 
 
 ## Codes, classifications and valuations
 
-
 ### Codes
 
 In order to work with national accounts we need to invest some time in understanding the coding system. There will be codes starting by *P*, *D* or *B*. *P* will refer to the goods and services transactions, *D* to distributive transactions and *B* to balancing items. A transaction, like *P6*, could be further detailed adding codes (*P61*, *P62*). This can go, specially in distributive transactions, up to the third/fourth digit (*D4432*). Luckily for us, in the goods and services accounts we will only have to learn a few codes up to two digits.
@@ -69,12 +68,19 @@ The symmetric classification for products is the CPA (Classification of Products
 
 ### Valuations
 
-Production would be expressed at basic prices, which is the price relevant to the producer. Almost all other transactions will be expressed in purchaser prices, which includes taxes less subsidies on products and trade and transport margins. Exports and imports would be expressed at FOB (Free on Broad^[<https://www.incotermsexplained.com/the-incoterms-rules/the-eleven-rules-in-brief/free-board/>]) in NAMA, which can be assumed to be purchaser prices, as they are the values provided by BOP (Balance of Payments). In SUT imports are expressed at CIF (Cost Insurance Freight^[<https://www.incotermsexplained.com/the-incoterms-rules/the-eleven-rules-in-brief/cost-insurance-freight/>]) as they are needed by product and therefore provided by FTS (Foreign Trade Statistics^[<https://ec.europa.eu/eurostat/documents/3859598/16099239/KS-GQ-22-001-EN-N.pdf/96ccbe2a-a05b-0660-356b-02072c2ada8a?t=1676298298316&download=true>]). In SUT, several valuation matrix would be needed to put in basic prices the Use table. This step is needed to compile Input Output tables.
+Production would be expressed at basic prices, which is the price relevant to the producer. Almost all other transactions will be expressed in purchaser prices, which includes taxes less subsidies on products and trade and transport margins. Exports and imports would be expressed at FOB (Free on Broad[^1]) in NAMA, which can be assumed to be purchaser prices, as they are the values provided by BOP (Balance of Payments). In SUT imports are expressed at CIF (Cost Insurance Freight[^2]) as they are needed by product and therefore provided by FTS (Foreign Trade Statistics[^3]). In SUT, several valuation matrix would be needed to put in basic prices the Use table. This step is needed to compile Input Output tables.
 
+[^1]: <https://www.incotermsexplained.com/the-incoterms-rules/the-eleven-rules-in-brief/free-board/>
+
+[^2]: <https://www.incotermsexplained.com/the-incoterms-rules/the-eleven-rules-in-brief/cost-insurance-freight/>
+
+[^3]: <https://ec.europa.eu/eurostat/documents/3859598/16099239/KS-GQ-22-001-EN-N.pdf/96ccbe2a-a05b-0660-356b-02072c2ada8a?t=1676298298316&download=true>
 
 ## The output approach
 
-The output approach is the basis of the NA system^[<https://politicalarithmetick.com/2017/04/03/what-the-textbooks-get-wrong-when-they-explain-gdp/>] even if it is of secondary importance for most users. If you look at a macroeconomics textbook the output approach is mainly ignored. The reason is that government cannot influence so much in the short-medium term the output transactions, but can do so directly in some expenditure transactions (government final consumption) or indirectly (household final consumption through the interest rates).
+The output approach is the basis of the NA system[^4] even if it is of secondary importance for most users. If you look at a macroeconomics textbook the output approach is mainly ignored. The reason is that government cannot influence so much in the short-medium term the output transactions, but can do so directly in some expenditure transactions (government final consumption) or indirectly (household final consumption through the interest rates).
+
+[^4]: <https://politicalarithmetick.com/2017/04/03/what-the-textbooks-get-wrong-when-they-explain-gdp/>
 
 ### Production (P1)
 
@@ -82,5 +88,10 @@ Production will be the first transaction we will look into and will be used to i
 
 In NAMA we will compile P1 by economic activity and in the supply table we will compile it additionally by product.
 
-![Production](figs/fig2.png){#fig-production}
-NAMA is the bottom row with the industry totals. In SUT we will have all the cells. However for some industries there will be only values in the diagonal while in others we will find values outside the diagonal. For example, the main output of a vineyard would be wine but they could also offer accommodation services, wine courses, etc.
+![Production](figs/fig2.png){#fig-prod}
+
+NAMA is the bottom row with the industry totals. In SUT, we will have all the cells. However for some industries there will be only values in the diagonal while in others we will find values outside the diagonal. For example, the main output of a vineyard would be wine but they could also offer accommodation services, wine courses, etc.
+
+We will find also in SUT a dissagregation of *P1* by economic activity into market output (*P11*), output produced for own final use (*P12*) and non-market output (*P.13*). The relevance will be different depending on the activity. *P12* would be important for NACE activities *L68A (Imputed rents of owner-occupied dwellings)* and *T (Activities of households as employers)*, because they are produced and consumed by households and activity *M72 (Scientific research and development)* because includes own accounts capital formation on R&D. *P13* would be most output of NACE O, P and Q. Additionally it would provide an idea of the amount of output that is calculated as sum of costs in the economy and the importance of the government sectors in different economic activities.
+
+![Types of Production](figs/fig3.png){#fig-prod_types}
