@@ -8,6 +8,7 @@ date: 2023-10-29
 format: 
   docx:
     toc: true
+    toc-depth: 5
     number-sections: true
     highlight-style: github
   html: default
@@ -101,4 +102,10 @@ We will find also in SUT a dissagregation of *P1* by economic activity into mark
 
 #### Transport and trade margins
 
-Something that we omitted in @fig-overview were transport and trade margins because they do not appear in NAMA. Production in NAMA and the supply table are measured in basic prices. That is the price received by the producer. That would be the price a seller in let's say Amazon receives. That price does not include taxes paid or received for the sale of the product, the cost of sending the product and the margin Amazon gets from the transaction. As later on, we want to put together supply and use we need to find a common valuation. This is easier done transforming basic prices in production to purchaser prices. It can be done transforming purchaser prices in the uses to basic prices but it is much more complex. In the first case, we would only need to add some extra columns while in the second complete valuation matrices will be needed. 
+Something that we omitted in @fig-overview were transport and trade margins because they do not appear in NAMA. Production in NAMA and the supply table are measured in basic prices. That is the price received by the producer. That would be the price a seller in let's say Amazon receives. That price does not include taxes paid or received for the sale of the product, the cost of sending the product and the margin Amazon gets from the transaction. As later on, we want to put together supply and use we need to find a common valuation. This is easier done transforming basic prices in production to purchaser prices. It can be done transforming purchaser prices in the use table to basic prices but it is much more complex. In the first case, we would only need to add some extra columns while in the second case, complete valuation matrices will be needed. 
+
+Negative adjustments will be made in CPAs *G* and *H* (and *D* in a few cases) and positive or null in the other CPA products. But the overall adjustment, the sum of all individual adjustment will be zero and therefore will not have an effect on NAMA.
+
+![Trade and transport margins](figs/fig4.png){#fig-ttm}
+
+### Taxes less subsidies on products (D21X31)
