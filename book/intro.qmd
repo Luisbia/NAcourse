@@ -1,5 +1,77 @@
 # Introduction
 
-This short guide is intended as a basic reference to understand the basics of National Accounts Main Aggregates (NAMA) and Supply and Use Tables (SUT) and the close interrelationships between the two from a practical point of view. We will omit some technical details and will provide just a practical overview. Both set of accounts describe the production, expenditure and income flows of an economy in a consistent way but using a different approach. We will not deal here with other parts of the National Accounts (sector accounts, financial accounts) although some reference to concepts like sectors and institutional units will need to be made. On the other hand, we will talk about classifications, codes and other practical aspects of the ESA 2010 transmission programme that are necessary for understanding the context and the practical use of the tables.
+Most books about National Accounts start with the famous three approaches to GDP:
 
-It is mainly intended with people with some familiarity with National Accounts that want to have a general understanding of the main variables and concepts used in both areas and how they relate to each other.
+Output: Production (*P1*) *minus* Intermediate consumption (*P2*) *plus* Taxes less subsidies on products (*D21X31*). $$B1GQ = P1 - P2 + D21X31 = B1G + D21X31$$ {#eq-output}
+
+Expenditure: Final consumption (*P3*), usually differentiated between private and government consumption, *plus* Investment (*P5*) *plus* Exports (*P6*) minus Imports (*P7*). $$B1GQ = P3 + P5 + P6 - P7$$ {#eq-expenditure}
+
+Income: Compensation of employees (*D1*) *plus* Gross operating surplus and mixed income (*B2A3G*) *plus* Taxes less subsidies (*D2X3*). $$B1GQ = D1 + B2A3G + D2X3$$ {#eq-income}
+
+I will deviate from that approach, which I find slightly confusing, and will start by two different equations.
+
+@eq-ts simply states that the total supply of goods and services in an economy are either produced domestically (*P1*) or imported (*P7*).
+
+$$TS = P1 + P7$$ {#eq-ts}
+
+@eq-tu shows what we do with the total supply of goods and services. They can be used as intermediate consumption (*P2*) in the production process of other goods and services, consumed (*P3*), used as investment (*P5*) or exported (*P6*).
+
+$$TU = P2 + P3 + P5 + P6$$ {#eq-tu}
+
+Obviously, the total supply has to be equal to the total uses (*TS = TU*) and rearranging then we arrive to something close to a combination of @eq-output and @eq-expenditure.
+
+$$P1 - P2 = P3 + P5 + P6 - P7$$ {#eq-tstubp}
+
+This equation is valid for data measured at *basic prices*. Basic prices exclude Taxes less subsidies on products and trade margins and transport costs. But GDP is measured at *market prices*. All transactions except *P1* are measured at market prices in the equation [^intro-1] but *P1* is measured at basic prices, which is the money received by the producer. When I buy a baguette for which I pay 1 euro, we would record a *P3* of 1 euro. The boulangerie would record a production of approximately 0.9 euros. It will not record the VAT as revenue because 0.1 euros will be paid to government as taxes. However, it will record all non-deductible taxes on products[^intro-2] as costs (*P2*). That's why we need to add *D21X31* to *P1* , to get an equation consistent with GDP at market prices, in which buyers and sellers prices are on the same valuation.
+
+[^intro-1]: But they can be converted with some effort to basic prices.
+
+[^intro-2]: In this simplified example I assumed 0.5 euros value added per baguette and a 20% VAT rate. The other 0.1 euros of VAT have been charged to the suppliers of inputs to the boulangerie.
+
+It is important to note, because many people are confused about this, that *P7* can be used for *P3*, *P5* or *P2*. So please do not make the assumption that a decrease of imports increases GDP. Only in the case that imports are substituted by domestic production, a decrease of imports would increase GDP. In all other cases, it would lead to a decrease in intermediate consumption (which should imply a decrease in production), final consumption or investment and be neutral for GDP.
+
+$$P1 + D21X31 - P2 = B1G + D21X31 = P3 + P5 + P6 + P7$$ {#eq-tstupp}
+
+We have seen now the origin of @eq-output and @eq-expenditure. Now we will look at @eq-income. We can start by expanding the value added in @eq-output:
+
+$$B1GQ = B1G + D21X31 = (D1 + B2A3G + D29X39) + D21X31 = D1 + B2A3G + D2X3$$ {#eq-income_exp}
+
+Value added is distributed between labour (*D.1*), capital (*B2A3G*) and taxes less subsidies on production (*D29X39*). We could break down the variables more precisely, especially *B2A3G* to distinguish the cost of capital *P51C* from an (imperfect[^intro-3]) proxy of profits (*B2A3N*) but also *D1* into wages and salaries (*D11*) and Social contributions (*D12*).
+
+[^intro-3]: Net operating surplus and mixed income (*B2A3N*) includes the labour remuneration of self-employed and the imputed rents of owner-occupied dwellings.
+
+We could use these equations to look at a production approach that combines the output and income approaches:
+
+$$P1 = P2 + D1 + B2A3N + P51C + D29X39$$
+
+
+Now time to practice these equations with @tbl-es1
+
+```{r}
+#| label: tbl-es1
+#| tbl-cap: Spain 2022, National Accounts aggregates
+#| echo: false
+table_1<- tibble::tribble(
+                                            ~label,     ~sto,      ~value,
+                                          "Output",     "P1",     2617983,
+                        "Intermediate consumption",     "P2",     1392351,
+                              "Value added, gross",    "B1G",     1225632,
+         "Gross domestic product at market prices",   "B1GQ",     1346377,
+                "Taxes less subsidies on products", "D21X31",      120745,
+                       "Compensation of employees",     "D1",      643047,
+                              "Wages and salaries",    "D11",      497275,
+                            "Social contributions",    "D12",      145772,
+       "Operating surplus and mixed income, gross",  "B2A3G",      571410,
+                    "Consumption of fixed capital",  "B2A3B",      226116,
+         "Operating surplus and mixed income, net",   "P51C",      345294,
+  "Other taxes less other subsidies on production", "D29X39",       11175,
+                           "Taxess less subsidies",   "D2X3",      131920,
+                   "Final consumption expenditure",     "P3",     1040844,
+                         "Gross capital formation",     "P5",      289220,
+                   "Exports of goods and services",     "P6",      550319,
+                   "Imports of goods and services",     "P7",      534006
+  )
+
+knitr::kable (table_1, format.args = list(big.mark = " "))
+```
+
