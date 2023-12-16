@@ -6,6 +6,7 @@ book:
   author: "Luis Biedma"
   date: "10/12/2023"
   chapters:
+    - index.qmd
     - intro.qmd
 
 
