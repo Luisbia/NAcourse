@@ -1,0 +1,20 @@
+project:
+  type: book
+
+book:
+  title: "Behind GDP"
+  author: "Luis Biedma"
+  date: "10/12/2023"
+  chapters:
+    - intro.qmd
+
+
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
