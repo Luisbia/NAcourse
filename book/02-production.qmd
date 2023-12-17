@@ -1,0 +1,29 @@
+# Output approach
+
+## Production (P1)
+
+Production will be the first transaction we will look into and will be used to illustrate some general characteristics of the NA system.
+
+In NAMA we will compile P1 by economic activity and in the supply table we will compile it additionally by product.
+
+![Production](figs/fig2.png){#fig-prod}
+
+NAMA is the bottom row with the industry totals. In SUT, we will have all the cells. However for some industries there will be only values in the diagonal while in others we will find values outside the diagonal. For example, the main output of a vineyard would be wine but they could also offer accommodation services, wine courses, etc.
+
+We will find also in SUT a dissagregation of *P1* by economic activity into market output (*P11*), output produced for own final use (*P12*) and non-market output (*P.13*). The relevance will be different depending on the activity. *P12* would be important for NACE activities *L68A (Imputed rents of owner-occupied dwellings)* and *T (Activities of households as employers)*, because they are produced and consumed by households and activity *M72 (Scientific research and development)* because includes own accounts capital formation on R&D. *P13* would be most output of NACE *O*, *P* and *Q*. Additionally it would provide an idea of the amount of output that is calculated as sum of costs in the economy and the importance of the government sectors in different economic activities.
+
+![Types of Production](figs/fig3.png){#fig-prod_types}
+
+## Transport and trade margins (OTTM)
+
+Something that we omitted in {#introduction} were transport and trade margins because they do not appear in NAMA. Production in NAMA and the supply table are measured in basic prices. That is the price received by the producer. That would be the price a seller in let's say Amazon receives. That price does not include taxes paid or received for the sale of the product, the cost of sending the product and the margin Amazon gets from the transaction. As later on, we want to put together supply and use we need to find a common valuation. This is easier done transforming basic prices in production to purchaser prices. It can be done transforming purchaser prices in the use table to basic prices but it is much more complex. In the first case, we would only need to add some extra columns while in the second case, complete valuation matrices will be needed.
+
+Negative adjustments will be made in CPAs *G* and *H* (and *D* in a few cases) and positive or null in the other CPA products. But the overall adjustment, the sum of all individual adjustment will be zero and therefore will not have an effect on NAMA.
+
+![Trade and transport margins](figs/fig4.png){#fig-ttm}
+
+## Taxes less subsidies on products (D21X31)
+
+Taxes less subsidies will allow us to evaluate production at market prices and it is only compiled by product and that's why there is no a NACE activity *B1GQ* and appears as a single aggregate in NAMA. Also add21Xing it to *B1G* will give us *B1GQ*. D31 will generally be positive, and quite important for more taxed products (cigarettes, tobacco, petrol) and ca be negative for products that are heavily subsidised.
+
+![Taxes less subsidies on products](figs/fig5.png){#fig-d21x31}
